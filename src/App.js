@@ -6,7 +6,7 @@ const GRID_ROWS = 15;
 const GRID_COLS = 20;
 
 const DROP_LENGTH = 4; // Length of each raindrop
-const OPACITIES = [0.4, 0.6, 0.8, 1]; // Reversed opacities for the raindrop
+const OPACITIES = [1, 0.8, 0.6, 0.4]; // Reversed opacities for the raindrop
 const MIN_DROPS = 10; // Minimum number of drops to be present
 
 const generateDrop = () => ({
@@ -66,8 +66,7 @@ const App = () => {
                   className="grid-cell"
                   style={{
                     backgroundColor: drop ? drop.color : 'transparent',
-                    opacity,
-                    border: drop ? '1px solid black' : 'none',
+                    opacity,                    
                   }}
                 />
               );
